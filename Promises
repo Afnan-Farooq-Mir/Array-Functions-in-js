@@ -1,0 +1,117 @@
+/*Assignment 1: Basic Promise Creation
+Create a function that returns a Promise. Resolve the Promise with a success message after a short delay, and reject it with an error message after a different delay.*/
+// function createPromise() {
+//     return new Promise((resolve, reject) => {
+//       const successDelay = 1000; // 1 second
+//       const errorDelay = 2000; // 2 seconds
+  
+//       setTimeout(() => {
+//         resolve('Promise resolved successfully');
+//       }, successDelay);
+  
+//       setTimeout(() => {
+//         reject('Promise rejected with an error');
+//       }, errorDelay);
+//     });
+//   }
+  
+//   // Usage
+//   createPromise()
+//     .then((successMessage) => {
+//       console.log(successMessage);
+//     })
+//     .catch((error) => {
+//       console.error(error.message);
+//     });
+  
+
+
+/*2--Handling Promise Rejection
+Create a promise that rejects after 3 seconds with an error message "Promise rejected due to an error." Use the .catch() method to handle the rejection and log the error message to the console.*/
+
+
+// const newPromise = new Promise((resolve,reject)=>{
+//     const event = false;
+//     if(event == true){
+//         setTimeout(()=>{
+//             resolve('Event Is True')
+//         },1000)
+//     }else{
+//         setTimeout(()=>{
+//             reject('Promise rejected due to an error')
+//         },3000)
+//     }
+// })
+// .then((event)=>{
+//     console.log(event)
+// })
+// .catch((error)=>{
+//     console.log(error)
+// })
+
+
+
+/*3--Chaining Promises
+Create two promises. The first one should resolve after 2 seconds with the message "First promise resolved." The second one should resolve after 1 second with the message "Second promise resolved." Chain these promises so that the second one runs after the first one is resolved. Log both resolved messages to the console.*/
+
+
+// const promiseOne = new Promise((resolve , reject)=>{
+//     setTimeout(()=>{
+//         resolve("First Promise Resolved");
+//     },2000)
+// }).then((date)=>{
+//     console.log(date)
+//     const promise2 = new Promise((resolve , reject)=>{
+//         setTimeout(()=>{
+//             resolve("Second Promise Resolved")
+//         },1000)
+//     })
+//     return promise2
+// }).then((p2)=>{
+//     console.log(p2)
+// })
+
+
+/*Assignment 4: Promise.all
+Create three promises, each resolving after different time intervals (e.g., 2 seconds, 3 seconds, and 4 seconds). Use Promise.all to wait for all promises to resolve and then log an array containing their resolved values to the console.*/
+
+
+// const promiseOne = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve("First Promise")
+//   },2000)  
+// })
+// const promiseTwo = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve("second Promise")
+//   },3000)  
+// })
+// const promiseThree = new Promise((resolve,reject)=>{
+//   setTimeout(()=>{
+//     resolve("Third Promise")
+//   },4000)  
+// })
+
+// Promise.all([promiseOne,promiseTwo,promiseThree]).then((date)=>{
+//     console.log(date)
+// })
+
+
+/*Create two promises. The first one should resolve after 4 seconds with the message "Promise 1 resolved." The second one should resolve after 2 seconds with the message "Promise 2 resolved." Use Promise.race to determine which promise resolves first and log its message to the console.*/
+
+
+const promiseOne = new Promise((resolve , reject )=>{
+    setTimeout(()=>{
+        resolve("First Promise Resolved")
+    },4000)
+})
+const promiseTwo = new Promise((resolve , reject )=>{
+    setTimeout(()=>{
+        resolve("Second Promise Resolved")
+    },2000)
+})
+
+Promise.race([promiseOne,promiseTwo]).then((data)=>{
+    console.log(data)
+})
+
