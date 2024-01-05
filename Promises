@@ -100,18 +100,18 @@ Create three promises, each resolving after different time intervals (e.g., 2 se
 /*Create two promises. The first one should resolve after 4 seconds with the message "Promise 1 resolved." The second one should resolve after 2 seconds with the message "Promise 2 resolved." Use Promise.race to determine which promise resolves first and log its message to the console.*/
 
 
-const promiseOne = new Promise((resolve , reject )=>{
-    setTimeout(()=>{
-        resolve("First Promise Resolved")
-    },4000)
-})
-const promiseTwo = new Promise((resolve , reject )=>{
-    setTimeout(()=>{
-        resolve("Second Promise Resolved")
-    },2000)
-})
+//const promiseOne = new Promise((resolve , reject )=>{
+ //   setTimeout(()=>{
+//        resolve("First Promise Resolved")
+//    },4000)
+//})
+//const promiseTwo = new Promise((resolve , reject )=>{
+ //   setTimeout(()=>{
+  //      resolve("Second Promise Resolved")
+   // },2000)
+//})
 
-Promise.race([promiseOne,promiseTwo]).then((data)=>{
-    console.log(data)
-})
+//Promise.race([promiseOne,promiseTwo]).then((data)=>{
+ //   console.log(data)
+//})
 
