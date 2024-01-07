@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-slate-700 grid place-content-center h-screen">
+    <div class="">
+      <div
+        class="p-6 max-w-sm mx-auto bg-black rounded-xl shadow-lg flex items-center space-x-4"
+      >
+        <div>
+          <img
+            class="h-20 w-15"
+            src="../dist/images/cccc-removebg-preview.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <div class="text-white text-2xl font-medium">
+            Alpha Mobiles
+            <p class="text-slate-300 text-base">A Compleat Mobile Shop</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="bg-sky-500 text-center mt-2 text-white text-base p-2 rounded-xl hover:bg-black hover:text-sky-400"
+    >
+      Shop Now
+    </button>
+  </body>
+</html>
