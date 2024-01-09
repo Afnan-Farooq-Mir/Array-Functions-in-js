@@ -1,0 +1,127 @@
+// /*Basic Callback:
+// Create a function that takes a callback as an argument and calls it after a set timeout of 2 seconds.*/
+
+// function myFunction(callback){
+
+//     console.log("Welcome to myFunction")
+
+//     setTimeout(()=>{
+//         callback();
+//     },2000)
+
+// }
+// function callback(){
+//     console.log("Welcome To Callback Function")
+// }
+// myFunction(callback)
+
+
+
+/*Array Callback:
+Write a function that takes an array and a callback. Use the callback to manipulate each element of the array (e.g., double each element).*/
+
+
+// function myFunction1(arr1,callback){
+// callback(arr1)
+// }
+// function callback(x){
+//     x.map((x)=>{
+//         console.log (x+=x)
+//     })
+// }
+// myFunction1([1,2,3,4,5],callback)
+
+
+
+/*Event Handling:
+Implement a function that attaches a click event listener to a button. The callback should display an alert when the button is clicked.*/
+
+// const button = document.getElementById("btn");
+// function myFun(){
+// button.addEventListener('click',()=>{
+
+//     alert("Hello")
+// })
+// }
+
+// myFun();
+
+
+
+/*Filter with Callback:
+Write a function that filters an array based on a provided callback condition. For example, filter an array of numbers to get only even numbers.*/
+// function myFunction2(arr1,callback){
+//    const result = callback(arr1);
+//     console.log(result)
+
+// }
+// function callback(y){
+
+//     return y.filter((z)=>{
+//        return z % 2 == 0;
+
+//     })
+
+// }
+// myFunction2([1,2,3,4,5,6,7,8,9,10,12,15,11,321,333,222],callback)
+
+
+
+
+
+
+
+// /*Map with Callback:
+// Implement a function that maps over an array and transforms each element using a provided callback. For example, convert an array of strings to uppercase.*/
+// function upperCase(arr1,callback){
+    
+    //    result= callback(arr1);
+    //     console.log(result)
+    // }
+    
+    // function callback(x){
+        //    return x.map((y)=>{
+            //        return y.toUpperCase()
+            //     })
+            
+            // }
+            
+            // upperCase(['a','b','c','d'],callback)
+            
+            
+            
+            // /*Promise with Callback:
+            // Write a function that returns a Promise and uses a callback to handle success or failure.*/
+            
+            
+            // function returnPromis(){
+                //     return new Promise((resolve,reject)=>{
+                    //         setTimeout(()=>{
+                        //             const result = true;
+                        //             if(result== true){
+                            //                 resolve("success!");
+                            //             }else{
+                                //                 reject("Error");
+                                //             }
+                                //         },2000)
+                                //     })
+                                // }
+                                
+                                // returnPromis()
+                                //   .then((result) => {
+                                    //     console.log(result); // Handle success
+                                    //   })
+                                    //   .catch((error) => {
+                                        //     console.error(error); // Handle failure
+                                        //   });
+                                        
+                                        
+ /*Chaining Callbacks:Create a sequence of functions that use callbacks to perform different operations sequentially. For instance, read a file, process the content, and then log the result*/
+                                        
+                                        
+                                        
+ /*Callback Hell Rescue: Refactor a piece of code with callback hell (nested callbacks) using Promises or async/await to make it more readable and maintainable.*/
+                                        
+                                        
+                                        
+ /*Async Callback:Create a function that simulates an asynchronous API call. Use a callback to handle the response once it's available.*/
