@@ -1,0 +1,111 @@
+/*Task: Print Array Elements
+
+Create an array of numbers.
+Use the forEach loop to print each element of the array to the console.*/
+
+
+// const arr1 = [1,2,3,4,5,6,7,8,9];
+// arr1.forEach((item)=>{
+//     console.log(item)
+// })
+
+/*Task: Calculate Sum
+
+Create an array of numbers.
+Use the forEach loop to calculate and print the sum of all elements in the array.*/
+
+// const arr2 = [1,2,3,4,5,6,7,8,9,10];
+// let sum =0;
+// arr2.forEach((item)=>{
+//     sum+=item 
+// })
+// console.log(sum)
+
+
+
+/*Task: Square Array Elements
+
+// Create an array of numbers.
+// Use the forEach loop to square each element in the array and update the array with the squared values.*/
+
+
+// arr3 = [2,3,4,5,6,7,8,9];
+// arr3.forEach((item,index,array)=>{
+//   array[index]= item*item
+  
+// })
+// console.log(arr3)
+
+
+/*Task: Filter Odd Numbers
+
+Create an array of numbers.
+Use the forEach loop to filter out and create a new array containing only the odd numbers from the original array.*/
+
+// const arr4 =[1,2,3,4,5,6,7,8,9];
+// let arr5 =[];
+// arr4.forEach((item,index,array)=>{
+//    if( item % 2 != 0){
+//     arr5.push(array[index])
+//    }
+
+// })
+// console.log(arr5)
+
+/*Task: Find Maximum Value
+
+Create an array of numbers.
+Use the forEach loop to find and print the maximum value in the array.*/
+
+
+// const arr6 =[21,23,13,54,77,88,23,99,44];
+// let bigNumber=0;
+// arr6.forEach((item,index,array)=>{
+
+//     if(bigNumber < item ){
+//         bigNumber = item;
+//     }
+// })
+
+// console.log(bigNumber)
+
+
+// /*Task: Modify Object Properties
+
+// Create an array of objects, where each object has a 'name' and 'age' property.
+// Use the forEach loop to add an additional property 'isAdult' to each object, based on whether the person is 18 or older.*/
+
+// const arr7 = [
+//     obj1 = {
+//         Name : 'Afnan',
+//         age : 23,
+//     },
+//     obj2 = {
+//         Name : 'AfnanCodingCorner',
+//         age : 16,
+//     }
+// ]
+
+// arr7.forEach((item,index,array)=>{
+
+//     item.isAdult =item.age>=18
+// })
+// console.log(arr7)
+
+
+
+/*Task: Parallel Array Transformation
+
+Create two arrays of equal length.
+Use the forEach loop to transform elements of both arrays in parallel (e.g., add corresponding elements together) and store the results in a new array.*/
+
+
+const arr8 = [1,2,3,4,5,6,7];
+const arr9 = [7,6,5,4,3,2,1];
+const arr10 =[];
+arr8.forEach((item,index,array)=>{
+    let tronsformValues = item + arr9[index];
+    arr10.push(tronsformValues)
+})
+
+console.log(arr10)
