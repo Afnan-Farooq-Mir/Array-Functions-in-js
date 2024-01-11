@@ -1,0 +1,19 @@
+const qouteDisplay = document.querySelector('#qoute');
+const nextQouteBtn = document.querySelector('#nextQoute');
+
+const qoutes  = ["The only way to do great work is to love what you do. - Steve Jobs",
+"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful. - Albert Schweitzer",
+"Believe you can and you're halfway there. - Theodore Roosevelt",
+"The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+"The best way to predict the future is to create it. - Peter Drucker"];
+
+
+nextQouteBtn.addEventListener('click',()=>{
+    // setInterval(()=>{
+    //     const randomQoutes = Math.floor(Math.random()*qoutes.length);
+    //     qouteDisplay.innerHTML= qoutes[randomQoutes]
+    
+    // },1000)
+        const randomQoutes = Math.floor(Math.random()*qoutes.length);
+        qouteDisplay.innerHTML= qoutes[randomQoutes]
+})
