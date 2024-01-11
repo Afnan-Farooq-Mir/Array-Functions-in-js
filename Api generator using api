@@ -1,0 +1,16 @@
+const qouteDisplay = document.querySelector('#qoute');
+const qouteButton = document.querySelector('#startBtn');
+
+const getQoute = async ()=>{
+    const response = await fetch('https://type.fit/api/quotes');
+    const data = await response.json();
+    const randomQoute = Math.floor(Math.random()*data.length);
+    const item = data[randomQoute];
+    const qoute = item.text;
+    const author = item.author;
+    
+    qouteDisplay.innerHTML =`${qoute} - ${author} `;
+
+}
+
+qouteButton.addEventListener('click',getQoute)
