@@ -1,0 +1,31 @@
+const dicee = document.getElementById('dice');
+const rollBtn = document.getElementById('rollButton');
+rollBtn.addEventListener('click',get_random_image)
+
+
+
+const arrayOfImages =['1.png','2.png','3.png','4.png','5.png','6.png']
+
+function get_random_image(){
+  // Get a random index
+  random_index = Math.floor(Math.random() * arrayOfImages.length);
+
+  dicee.style.transform = 'rotateX(360deg)'
+  // Get an image at the random_index
+  selected_image = arrayOfImages[random_index]
+  
+  // Display the image
+  setTimeout(()=>{
+    
+    dicee.src = `./images/${selected_image}`
+    
+  },100)
+
+}
+
+
+
+
+
+
+
