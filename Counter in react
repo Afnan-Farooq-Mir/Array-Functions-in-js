@@ -1,0 +1,45 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  let [count, setCount] = useState(0)
+
+  function addValue(){
+    if(count<20){
+
+      setCount(count + 1)
+    }
+    else{
+      setCount(count)
+    }
+
+    
+
+  }
+  function removeValue(){ 
+    setCount(count - 1)
+    
+
+  }
+  
+  function resetValue(){
+    setCount(0)
+    
+
+  }
+
+  return (
+    <>
+      <h1>Counter</h1>
+      <h2>Counter Value : {count}</h2>
+     <button type="button" onClick={addValue}>+</button>
+     <button type="button" onClick={resetValue}>Reset</button>
+     <button type="button" onClick={removeValue}>-</button>
+    
+    </>
+  )
+}
+
+export default App
