@@ -1,0 +1,95 @@
+// /*Object Creation:
+// Create a simple object representing a person with properties like name, age, and gender. Log the object to the console.*/
+
+// const person ={
+//     name : 'Afnan',
+//     age : 23,
+//     Gender : 'Male'
+// }
+// console.log(person);
+
+// /*Object Methods:
+// Add a method to the person object that prints a greeting message including the person's name. Call this method and log the result.*/
+
+// function greet(name){
+
+//     console.log(`Hello My Name Is ${name} `)
+    
+// }
+
+// greet(person.name);
+
+
+
+/*Create an object representing a shopping cart with items and their prices. Use a for...in loop to iterate through the object and log each item along with its price.*/
+
+
+// const shopingCart ={
+
+//     Apple : '50/Kg',
+//     Rice : '500/Kg',
+//     Bread : 30,
+//     Clothes : 1200,
+//     Juice : 40,
+
+// }
+
+// for (const i in shopingCart){
+//     console.log(`price of ${i} is ${shopingCart[i]}`)
+// }
+
+
+
+// /*
+// Object Composition:
+// Create two objects, one representing a car and another representing an owner. Compose these objects to associate an owner with a car. Log the details of the car along with its owner.*/
+
+// // Create an owner object
+// const owner = {
+//     name: "Alice",
+//     age: 30,
+//     city: "123 Main Street",
+//   };
+  
+//   // Create a car object
+//   const car = {
+//     make: "Toyota",
+//     model: "Camry",
+//     year: 2022,
+//     color: "Blue",
+//   };
+
+
+//   console.log(`Car Details:
+//     Make: ${car.make}
+//     Model: ${car.model}
+//     Year: ${car.year}
+//     Color: ${car.color}
+//     Owner: ${owner.name}, Age: ${owner.age}, City: ${owner.city}`);
+
+
+
+//     /*Object Prototypes and Inheritance:
+// Create a base object Vehicle with properties like make, model, and a method start() that prints a message. Create another object Car that inherits from Vehicle and has an additional property numDoors. Override the start() method to include information about the car. Create an instance of Car and call its start() method.*/
+
+
+// const vehicle = {
+//     make: "hello",
+//     model: "2020",
+//     start : function(){
+//         console.log(`${this.make}, ${this.model}`)
+//     }
+//   };
+// const car = Object.create(vehicle);
+// car.numDoor = 5;
+
+// car.start = function(){
+//         console.log(`${this.make}, ${this.model}, ${this.numDoor}`)
+
+//     }
+
+// car.start()
+
+
+
+
