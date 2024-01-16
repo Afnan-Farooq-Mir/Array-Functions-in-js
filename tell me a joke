@@ -1,0 +1,76 @@
+//HTML
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joke-Teller</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" id="jokeBtn">Tell Me A Joke</button>
+      <audio id="audio" src="" controls hidden></audio>
+    </div>
+    <!-- Script -->
+    <script src="./voice.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
+//JAVASCRIPT
+
+
+
+
+const button = document.getElementById('jokeBtn');
+const audioElement = document.getElementById('audio')
+
+//SDK In Another File
+
+
+//ToggleFunction (Disable And enable Function)
+function toggleButton(){
+    button.disabled = !button.disabled;
+}
+
+//Connect 
+function connectUS(joke){
+    
+    VoiceRSS.speech({
+        key: 'YOUR_API',
+        src: joke,
+        hl: 'en-us',
+        v: 'Linda',
+        r: 0, 
+        c: 'mp3',
+        f: '44khz_16bit_stereo',
+        ssml: false
+    });
+}
+
+
+//Jokes Api
+async function getJokes(){
+    const apiUrl = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single'
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        connectUS(data.joke)
+        toggleButton();
+    } catch (error) {
+        console.log("WHOOPS ERROR BRO ERROR", error)
+    }
+}
+button.addEventListener('click',getJokes);
+audioElement.addEventListener('ended',toggleButton)
