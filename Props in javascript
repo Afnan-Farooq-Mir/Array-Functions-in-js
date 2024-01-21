@@ -1,0 +1,40 @@
+//props.jsx
+
+import React from 'react'
+
+export default function Props(props) {
+  return (
+    <div>
+      <h1>Name :{props.name}</h1>
+      <h1>Age :{props.age}</h1>
+      <h1>City :{props.city}</h1>
+
+
+
+
+//In this example, the App.jsx renders the Props.jsx and passes it three props: name ,age and city. In the Props.jsx, we access these props using props.name ,props.age and props.city to display the information passed from the App.jsx component.
+    </div>
+  )
+}
+
+
+
+
+// App.jsx
+
+
+
+import './App.css'
+import Props from './assets/components/Props'
+
+function App() {
+ 
+
+  return (
+    <>
+    <Props name='Afnan' age ={25} city = 'Srinagar' />
+    </>
+  )
+}
+
+export default App
