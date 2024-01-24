@@ -1,3 +1,4 @@
+//Random Qoute
 const qouteDisplay = document.querySelector('#qoute');
 const qouteButton = document.querySelector('#startBtn');
 
